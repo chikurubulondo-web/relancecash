@@ -58,3 +58,16 @@ Ne pas communiquer « paiements live » avant `sk_live_` + price id.
 - `traffic/07-directories.md`
 - `traffic/08-facebook-post.md`
 - `FIRST_SALE_PLAYBOOK.md`
+
+
+## Repo GitHub (public)
+https://github.com/chikurubulondo-web/relancecash  
+Deploy one-click: brancher ce repo sur Vercel → Add env vars → Deploy.
+
+## Qualité vérifiée ce soir (Europe/Paris)
+- `npm run build` OK
+- `GET /` → 200
+- `POST /api/generate` → 200, source gemini (fallback templates OK)
+- `GET /api/checkout` → configured:false, priceEur:19 (honnête)
+- Paywall UI + success unlock cookie/localStorage prêts
+- SEO meta FR (relance facture WhatsApp, relance paiement freelance)
