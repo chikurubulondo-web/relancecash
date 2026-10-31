@@ -13,12 +13,15 @@ npm run build && npm start   # → http://localhost:3000
 Serveur de prod actuellement démarré sur le box : **http://127.0.0.1:3000** (OK 200).
 
 ## 3. URL publique
-**Pas d’URL publique stable ce soir.**  
-Tentatives : Cloudflare quick tunnel (`*.trycloudflare.com`) et localtunnel (`*.loca.lt`) → échec réseau sandbox (QUIC/egress timeout / 502).  
-**Bloqueur deploy sans login kkkl :** Vercel / Cloudflare Pages / Railway exigent un compte. Aucun tunnel gratuit ne tient depuis ce box.
+**LIVE (Vercel temporary anonymous):** https://speedy-cello-k1yu0kl.tmp.now
+- Homepage + `/api/generate` verified **HTTP 200** from outside (Europe/Paris 31 oct 2026 ~23:26).
+- Gemini generation works on this URL.
+- **Expire ~60 min** après création sauf claim. Claim: https://vercel.com/claim-deployment?code=1a09ac0b-f5e5-4d97-bdfb-56b3d2bcc1d0
+- Keepalive box: `scripts/keepalive-vercel-temp.sh` (PID file `/tmp/relancecash-keepalive.pid`) pour redeploy avant expiration.
+- URL permanente sans claim: besoin compte **Vercel** (kkkl) — pas de `VERCEL_TOKEN` / Netlify / Cloudflare / Fly sur le box.
+- Netlify anonymous: refuse les serverless functions Next.js sans login.
+- Cloudflare quick tunnel: TLS fail depuis ce box.
 
-**Quand kkkl est réveillé (5 min) :**  
-`npx vercel` (ou brancher le repo GitHub) + coller les env vars → URL `*.vercel.app`.
 
 ## 4. Stripe
 | Champ | Valeur |
