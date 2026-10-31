@@ -11,7 +11,7 @@ It returns 3 WhatsApp messages + 2 emails ready to paste.
 
 Stack: Next.js, optional Gemini, strong FR templates as fallback, Soft paywall (2 free gens) then €19 lifetime early bird via Stripe.
 
-URL: [COLLER_URL]
+URL: https://github.com/chikurubulondo-web/relancecash → bientôt URL Vercel
 
 Honest note: Stripe may still be in test mode until live keys are set — happy to take feedback on copy quality and UX.
 
